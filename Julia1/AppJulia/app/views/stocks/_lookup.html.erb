@@ -12,12 +12,13 @@
 				<div class="col-md-2">
 					<%= button_tag(type: :submit, class: 'btn btn-lg btn-success') do %>
 					<i class='fa fa-search'></i> Look up a stock
-				<% end %>
+					<% end %>
 				</div>
 		</div>
 	<% end %>
-</div>
+ 
 
+ <%= render 'common/spinner' %>
 
 <% if @stock %>
 	<div id="stock-lookup-results" class="well results-block">
@@ -25,9 +26,12 @@
 		<strong>Name:</strong> <%= @stock.name %>
 		<strong>Price:</strong> <%= @stock.price %>
 	</div>
-
+<% end %>
 	<div id="stock-lookup-errors"></div>
 	
-<% end %>
+ 
+
+
+</div>
 
 
